@@ -1,0 +1,651 @@
+.abs-image {
+    width: 100px;
+    height: 100px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 10px;
+    color: white;
+}
+
+.baggage-badge {
+    background-color: #d63384;
+}
+
+.btn-link {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    /* Text */
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-items: center;
+    text-align: right !important; 
+}
+
+.carousel-selector {
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-selector-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.carousel-selector-button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.carousel-selector-button:hover:not(:disabled) {
+    color: #0066cc;
+}
+
+.carousel-selector-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-selector-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.carousel-selector-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.carousel-selector-item.selected {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.categories-badge {
+    background-color: #fd7e14;
+}
+
+.cityDropdown {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="%23000" viewBox="0 0 24 24"%3E%3Cpath d="M6 9l6 6 6-6"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+.class-badge {
+    background-color: #6f42c1;
+}
+
+.confirmation-container {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.discount {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.descuento-etiqueta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #28a83d;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.div-img-cover > img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.enlace-hover:hover {
+    color: #0d6efd !important;
+}
+
+.expiration-badge {
+    background-color: #dc3545;
+}
+
+.client-badge {
+    background-color: #fd7e14;
+}
+
+.flight-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* margin-bottom: 8px; */
+    transition: transform 0.2s ease-in-out;
+}
+
+.flight-card:hover {
+    transform: translateY(-5px);
+}
+
+.flight-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.flight-cost {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+.flight-date {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.flight-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 15px;
+}
+
+.flight-info {
+    display: flex;
+    align-items: center;
+}
+
+.flight-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.flight-pagination button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.flight-pagination button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.flight-pagination button:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+.flight-pagination span {
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.flight-route {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.footerFix {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+.img-logo {
+  background-image: url('/ruta/a/imagen.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 70%;
+  height: 100%;
+}
+
+.index-banner {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.index-imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.modal-content {
+    margin: auto;
+    max-width: 90%;
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.noModifyTextfile { 
+	color: grey;
+}
+
+container-reservation {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.pagination button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button {
+    margin: 0 0.5rem;
+}
+
+.pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+}
+
+.pagination span {
+    margin: 0 10px;
+}
+
+.paquete-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.paquete-card .card-body {
+    padding: 1.5rem;
+}
+
+.paquete-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.paquete-card .card-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.paquete-card .card-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.paquete-card:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.reservation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.reservation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.reservation-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reservation-header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reservation-header .user-info p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.reservation-header .reservation-date-cost {
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.route-card {
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.route-card .status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.route-card:hover {
+    transform: translateY(-5px);
+}
+
+.route-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.route-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.short-form {
+	width: 42%;
+}
+
+aside ul li {
+    margin-bottom: 0.5rem;
+}
+
+aside ul li a:hover {
+    color: #0d6efd !important;
+}
+
+.status-badge {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.texto-colapsado {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ticket-badge {
+    background-color: #3498db;
+}
+
+.aerolinea-etiqueta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fd7e14;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.cliente-etiqueta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffc107;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.window {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+    }
+}
+
+.savings {
+    background-color: #28a745;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+}
+.flights {
+    background-color: #e9ecef;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
+
+.is-valid {
+	background-color: #e9ecef;
+}
+
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-icon {
+    background: #f3f4f6;
+    padding: 0.75rem;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.info-value {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.passengers-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.passengers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.passenger-card {
+    border: 2px solid transparent;	
+    border-radius: 8px;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100px; /* Fixed height */
+    display: flex;
+    align-items: center;
+}
+
+.passenger-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.passenger-avatar {
+    background: #e5e7eb;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passenger-details {
+    flex: 1;
+}
+
+.passenger-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.passenger-type {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.passenger-type.primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.passenger-type.secondary {
+    background: #e5e7eb;
+    color: #4b5563;
+}
