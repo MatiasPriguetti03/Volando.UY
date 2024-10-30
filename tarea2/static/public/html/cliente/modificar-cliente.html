@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/bootstrap-icons-1.11.3/airplane-fill.svg" type="image/x-icon">
+    <title>Volando.uy - Consulta de Usuario - Cliente</title>
+    <link href="../../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/bootstrap-icons-1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+    <link href="../../css/custom.css" rel="stylesheet">
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+    <div class="container-fluid p-0">
+        <header class="bg-primary text-white bg-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <a href="index.html">
+                            <img class="img-logo" src="../../assets/images/logo-no-bg.png" alt="Volando.uy"></img>
+                        </a>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Usuario, Ruta, vuelo, Paquete">
+                            <button class="btn btn-primary" type="button">Buscar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-end">
+
+                        <!-- Usuario logueado -->
+
+                        <div class="dropdown">
+                            <div class="d-flex align-items-center" style="justify-content: end" id="userDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="user-avatar me-2">
+                                    <img src="../../assets/images/US07.jpeg" alt="Emily" class="rounded-circle"
+                                        width="40" height="40">
+                                </div>
+                                <span class="me-2 texto-colapsado" style="color: black; user-select: none;">Emily</span>
+                                <i class="bi bi-chevron-down" style="color: black;"></i>
+                            </div>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="detalle-cliente-perfil-propio.html">Mi Perfil</a></li>
+                                
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="../index.html">Cerrar Sesión</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Category Section -->
+        <div class="bg-white border-bottom py-3">
+            <div class="container">
+                <div class="row category-icons text-center">
+                    <div class="col">
+                        <a href="listado-vuelos.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-airplane"></i>
+                            <span>Vuelos</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="listado-ruta-vuelo.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-arrow-down-up"></i>
+                            <span>Ruta de Vuelo</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="listado-usuarios.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-people"></i>
+                            <span>Usuarios</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="listado-paquete.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-star"></i>
+                            <span>Paquetes</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <div class="row">
+                <aside class="col-lg-3 mb-4">
+					<!-- Botones de acción importantes -->
+                    <div class="d-grid gap-3 mb-4">
+                        <!-- Cliente -->
+                        <button class="btn btn-success btn-lg">
+                            <a href="listado-vuelos.html" class="text-decoration-none" style="color: white;">
+                                <i class="bi bi-calendar-check me-2"></i>Realizar Reserva
+                            </a>
+                        </button>
+                        <button class="btn btn-orange btn-lg">
+                            <a href="listado-paquete.html" class="text-decoration-none" style="color: white;">
+                                <i class="bi bi-star me-2"></i>Comprar Paquete
+                            </a>
+                        </button>
+                        <!-- General -->
+                        <button class="btn btn-purple btn-lg">
+                            <a href="listado-reserva-vuelo.html" class="text-decoration-none" style="color: white;">
+                                <i class="bi bi-search me-2"></i>Consultar Reserva
+                            </a>
+                        </button>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><b>Categorías</b></div>
+                        
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Nacionales</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Internacionales</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Europa</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">América</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Exclusivos</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Temporada</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Cortos</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                
+                <div class="col-lg-9">
+                    <div class="card mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="../../assets/images/US07.jpeg" alt="Emily" class="img-fluid rounded-start">
+                            </div>
+                            <div class="col-md-8">
+                            	<div class="card-body">
+		                        	<h3 class="card-title fw-bold">Emily Jhonson</h3>
+		                        	<p class="text-muted mb-0" style="padding-bottom: 1rem">ejstar</p>
+		                            <p class="text-card"><b>Cambiar o agregar foto de perfil:</b></p>
+                                	<input type="file" accept="image/*" class="form-control short-form" id="image">
+                            	</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="window mb-4">
+                       	<div class="row ">
+                            <div class="col-md-12">
+                            	<h4><b>Datos del Perfil:</b></h4>
+	                            <form>
+	                                <div class="mb-3">
+	                                    <label for="nickname" class="form-label"><b>Nickname:</b></label>
+	                                    <input type="text" class="form-control noModifyTextfile" id="nickname" 
+	                                    	value="ejstar" readonly>
+	                                </div>
+	                                <div class="mb-3">
+	                                    <label for="name" class="form-label"><b>Nombre:</b></label>
+	                                    <input type="text" class="form-control" id="name" value="Emily">
+	                                </div>
+	                                <div class="mb-3">
+	                                    <label for="surname" class="form-label"><b>Apellido:</b></label>
+	                                    <input type="text" class="form-control" id="surname"
+	                                        value="Jhonson">
+	                                </div>
+	                                <div class="mb-3">
+	                                    <label for="email" class="form-label"><b>E-mail:</b></label>
+	                                    <input type="email" class="form-control noModifyTextfile" id="email" 
+	                                    value="emily.j@hotmail.com" readonly>
+	                                </div>
+	                                <div class="mb-3">
+	                                	<label for="birth-date" class="form-label"><b>Fecha de Nacimiento:</b></label>
+	                                	<input type="date" class="form-control" id="brith-date"
+	                                		value="1985-06-24">
+	                                </div> 
+	                                <div class="mb-3">
+	                                    <label for="nacionality" class="form-label"><b>Nacionalidad:</b></label>
+	                                    <input type="text" class="form-control" id="nacionality"
+	                                        value="Estadounidense">
+	                                </div>
+	                                <div class="mb-3">
+	                                	<label for="doc-type" class="form-label"><b>Tipo de Documento:</b></label>
+	                                	<select class="form-select" id="doc-type">
+	                                		<option value="cedula">Cedula</option>
+	                                		<option value="pasaporte" selected="selected">Pasaporte</option>
+	                                	</select>
+	                                </div>
+	                                <div class="mb-3">
+	                                    <label for="nro-doc" class="form-label"><b>Numero de Documento:</b></label>
+	                                    <input type="text" class="form-control" id="nro-doc"
+	                                        value="485719842">
+	                                </div>
+	                     	   </form>
+                        	</div> 
+                    	</div>
+                    </div>
+                    <div class="text-center mt-4">
+                   		<button type="submit" class="btn btn-primary btn-lg w-20" id="submit-form">Guardar</button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark py-4 mt-auto">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-auto">
+                    <div class="small m-0 text-white">Copyright &copy; Volando.uy 2023</div>
+                </div>
+                <div class="col-auto">
+                    <a class="link-light small" href="#!">Privacy</a>
+                    <span class="text-white mx-1">&middot;</span>
+                    <a class="link-light small" href="#!">Terms</a>
+                    <span class="text-white mx-1">&middot;</span>
+                    <a class="link-light small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

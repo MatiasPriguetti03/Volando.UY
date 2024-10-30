@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="../assets/bootstrap-icons-1.11.3/airplane-fill.svg" type="image/x-icon"">
+    <title>Volando.uy - Paquetes</title>
+    <link href=" ../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/bootstrap-icons-1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+    <div class="container-fluid p-0">
+        <header class="bg-primary text-white bg-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <a href="index.html">
+                            <img class="img-logo" src="../assets/images/logo-no-bg.png" alt="Volando.uy"></img>
+                        </a>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Usuario, Ruta, vuelo, Paquete">
+                            <button class="btn btn-primary" type="button">Buscar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-end">
+
+                        <div class="d-flex align-items-center" style="justify-content: space-between">
+                            <a href="alta-usuario.html" class="btn btn-outline-primary">Registrarse</a>
+                            <a href="inicio-sesion.html" class="btn btn-primary"
+                                style="white-space: nowrap; margin-left: 0.5rem;">Iniciar Sesión</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    	</header>
+    </div>
+
+    <main>
+        <!-- Category Section -->
+        <div class="bg-white border-bottom py-3">
+            <div class="container">
+                <div class="row category-icons text-center">
+                    <div class="col">
+                        <a href="listado-vuelos.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-airplane"></i>
+                            <span>Vuelos</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="listado-ruta-vuelo.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-arrow-down-up"></i>
+                            <span>Ruta de Vuelo</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="listado-usuarios.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-people"></i>
+                            <span>Usuarios</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="listado-paquete.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-star"></i>
+                            <span>Paquetes</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4 mb-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- Categorías -->
+                    <div class="card">
+                        <div class="card-header"><b>Categorías</b></div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Nacionales</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Internacionales</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Europa</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">América</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Exclusivos</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Temporada</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Cortos</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- Lista rutas de vuelo -->
+                <div class="col-lg-9">
+                    <h2 class="mb-4">Usuarios</h2>
+                    <!-- Filtros -->
+                    <div class="d-flex">
+                        <div class="d-flex flex-row window mb-3 w-100">
+                            <div class="col-4 d-flex">
+                                <h5 class="align-self-end">Tipo de Usuario</h5>
+                            </div>
+                            <div class="input-group">
+                                <label class="input-group-text" for="inputGroupSelect01">
+                                    <i class="bi bi-funnel-fill"></i>
+                                </label>
+                                <select class="form-select" id="inputGroupSelect01">
+                                    <option selected>Elige...</option>
+                                    <option value="1">Aerolinea</option>
+                                    <option value="2">Cliente</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <a href="../html/detalle-aerolinea-perfil.html" class="text-decoration-none" style="color: black">
+                                    <img src="../assets/images/US01.png" class="rounded-start index-imagen" alt="Montevideo-Madrid">
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="../html/detalle-aerolinea-perfil.html" class="text-decoration-none" style="color: black">Aerolineas Argentinas - (aerolineas)</a></h5>
+                                    <span class="badge client-badge">Aerolinea</span>
+                                    <a href="../html/detalle-aerolinea-perfil.html" class="btn btn-link p-0">Saber más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <a href="../html/detalle-cliente-perfil.html" class="text-decoration-none" style="color: black">
+                                    <img src="../assets/images/US07.jpeg" class="rounded-start index-imagen"
+                                        alt="Ciudad de Panamá-Nueva York">
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="../html/detalle-cliente-perfil.html" class="text-decoration-none" style="color: black">Emily Johnson - (ejstar)</a></h5>
+                                    <span class="badge client-badge">Cliente</span>
+                                    <a href="../html/detalle-cliente-perfil.html" class="btn btn-link p-0">Saber más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark py-4 mt-auto footerFix">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-auto">
+                    <div class="small m-0 text-white">Copyright &copy; Volando.uy 2023</div>
+                </div>
+                <div class="col-auto">
+                    <a class="link-light small" href="#!">Privacy</a>
+                    <span class="text-white mx-1">&middot;</span>
+                    <a class="link-light small" href="#!">Terms</a>
+                    <span class="text-white mx-1">&middot;</span>
+                    <a class="link-light small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

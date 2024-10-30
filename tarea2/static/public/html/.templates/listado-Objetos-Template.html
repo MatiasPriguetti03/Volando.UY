@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="../assets/bootstrap-icons-1.11.3/airplane-fill.svg" type="image/x-icon">
+    <title>Volando.uy</title>
+    <link href="../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/bootstrap-icons-1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="window">
+        <h3>Rutas de Vuelo Incluidas</h3>
+        <div id="routeList"></div>
+        <div class="pagination">
+            <button id="prevBtn" aria-label="Página anterior"><i class="bi bi-chevron-left"></i></button>
+            <span id="pageInfo"></span>
+            <button id="nextBtn" aria-label="Página siguiente"><i class="bi bi-chevron-right"></i></button>
+        </div>
+    </div>
+</body>
+
+<script>
+    // Datos de las rutas de vuelo
+    const flightRoutes = [
+        { from: "Montevideo", to: "Buenos Aires", airline: "Iberia", flightNumber: "IB6012", seatType: "Ejecutivo", seatsAvailable: 4, status: "Ingresada" },
+        { from: "Buenos Aires", to: "Santiago de Chile", airline: "Iberia", flightNumber: "IB6969", seatType: "Turista", seatsAvailable: 3, status: "Rechazada" },
+        { from: "Santiago de Chile", to: "Montevideo", airline: "Iberia", flightNumber: "IB7002", seatType: "Ejecutivo", seatsAvailable: 3, status: "Confirmada" },
+        { from: "Lima", to: "Bogotá", airline: "LATAM", flightNumber: "LA2045", seatType: "Turista", seatsAvailable: 5, status: "Confirmada" },
+        { from: "Bogotá", to: "Ciudad de México", airline: "Avianca", flightNumber: "AV901", seatType: "Ejecutivo", seatsAvailable: 2, status: "Rechazada" },
+        { from: "Ciudad de México", to: "Lima", airline: "Aeroméxico", flightNumber: "AM48", seatType: "Turista", seatsAvailable: 7, status: "Ingresada" }
+    ];
+    
+    
+    let currentPage = 1;
+    const itemsPerPage = 3;
+    const totalPages = Math.ceil(flightRoutes.length / itemsPerPage);
+    
+    // Función para mostrar las rutas en la página actual
+    function displayRoutes() {
+        const routeList = document.getElementById('routeList');
+        routeList.innerHTML = '';
+        
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const currentRoutes = flightRoutes.slice(startIndex, endIndex);
+        
+        if (currentRoutes.length === 0) {
+            routeList.innerHTML = '<p>No hay rutas para mostrar</p>';
+            updatePagination();
+            return;
+        }
+
+        currentRoutes.forEach(route => {
+            const routeCard = document.createElement('div');
+            routeCard.className = 'route-card';
+            if (route.status === 'Rechazada') {
+                bgColor = '#007bff';
+            } else if (route.status === 'Confirmada') {
+                bgColor = '#007bff';
+            } else {
+                bgColor = '#007bff';
+            }
+
+            routeCard.innerHTML = `
+                        <div class="route-info">
+                            <a href="#" class="text-decoration-none">
+                                <h3>${route.from}-${route.to} por ${route.airline} (${route.flightNumber})</h3>
+                            </a>
+                            <p>${route.seatType}</p>
+                        </div>
+                        <div class="status-badge">
+                            ${route.seatType}: ${route.seatsAvailable} asientos
+                        </div>
+                    `;
+            routeList.appendChild(routeCard);
+        });
+
+        updatePagination();
+    }
+
+    // Función para actualizar la información de paginación
+    function updatePagination() {
+        document.getElementById('pageInfo').textContent = `${currentPage} de ${totalPages}`;
+        document.getElementById('prevBtn').disabled = currentPage === 1;
+        document.getElementById('nextBtn').disabled = currentPage === totalPages;
+    }
+
+    // Función para cambiar de página
+    function changePage(direction) {
+        currentPage += direction;
+        if (currentPage < 1) currentPage = 1;
+        if (currentPage > totalPages) currentPage = totalPages;
+        displayRoutes();
+    }
+
+    // Configurar los event listeners para los botones de paginación
+    document.getElementById('prevBtn').addEventListener('click', () => changePage(-1));
+    document.getElementById('nextBtn').addEventListener('click', () => changePage(1));
+
+    // Inicializar la visualización
+    displayRoutes();
+</script>
+</html>

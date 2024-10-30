@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="../assets/bootstrap-icons-1.11.3/airplane-fill.svg" type="image/x-icon">
+    <title>Volando.uy</title>
+    <link href="../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/bootstrap-icons-1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="carousel-selector-container" style="justify-content: center;">
+        <button id="prevButton" class="carousel-selector-button" aria-label="Anterior">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+        <div id="carousel" class="carousel-selector">
+            <div class="carousel-selector-item" data-id="ZL1502001">
+                <img src="https://via.placeholder.com/100" alt="Item 1">
+                <span">ZL1502001</span>
+            </div>
+            <div class="carousel-selector-item" data-id="ZL1502002">
+                <img src="https://via.placeholder.com/100" alt="Item 2">
+                <span>ZL1502002</span>
+            </div>
+        </div>
+        <button id="nextButton" class="carousel-selector-button" aria-label="Siguiente">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+    </div>
+</body>
+
+<script>
+    const carousel = document.getElementById('carousel');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const items = [
+        { id: 'ZL1502001', imageUrl: 'https://via.placeholder.com/100' },
+        { id: 'ZL1502002', imageUrl: 'https://via.placeholder.com/100' },
+        { id: 'ZL1502003', imageUrl: 'https://via.placeholder.com/100' },
+        { id: 'ZL1502004', imageUrl: 'https://via.placeholder.com/100' },
+        { id: 'ZL1502005', imageUrl: 'https://via.placeholder.com/100' },
+        { id: 'ZL1502006', imageUrl: 'https://via.placeholder.com/100' },
+        { id: 'ZL1502007', imageUrl: 'https://via.placeholder.com/100' },
+    ];
+
+    let currentIndex = 0;
+    let itemsInCarousel = 4;
+
+    function updateCarousel() {
+        carousel.innerHTML = '';
+        for (let i = currentIndex; i < currentIndex + itemsInCarousel && i < items.length; i++) {
+            const item = items[i];
+            const itemElement = document.createElement('div');
+            itemElement.className = 'carousel-selector-item';
+            itemElement.dataset.id = item.id;
+
+            itemElement.innerHTML = `
+                <img draggable="false" src="${item.imageUrl}" alt="Item ${i + 1}">
+                <span style="user-select: none;">${item.id}</span>
+            `;
+            itemElement.addEventListener('click', () => selectItem(item.id));
+            carousel.appendChild(itemElement);
+        }
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex >= items.length - itemsInCarousel;
+    }
+
+    function selectItem(id) {
+        document.querySelectorAll('.carousel-selector-item').forEach(item => {
+            item.classList.toggle('selected', item.dataset.id === id);
+        });
+    }
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < items.length - itemsInCarousel) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    updateCarousel();
+</script>
+
+
+
+</html>

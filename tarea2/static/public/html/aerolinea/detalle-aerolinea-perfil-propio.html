@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="../../assets/bootstrap-icons-1.11.3/airplane-fill.svg" type="image/x-icon"">
+    <title>Volando.uy</title>
+    <link href="../../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/bootstrap-icons-1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../css/custom.css" rel="stylesheet" />
+    <link href="../../css/styles.css" rel="stylesheet" />
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+    <main class="container-fluid p-0 mb-4">
+        <header class="bg-primary text-white bg-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <a href="index.html">
+                            <img class="img-logo" src="../../assets/images/logo-no-bg.png" alt="Volando.uy"></img>
+                        </a>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Usuario, Ruta, vuelo, Paquete">
+                            <button class="btn btn-primary" type="button">Buscar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-end">
+
+                        <!-- Usuario logueado -->
+
+                        <div class="dropdown">
+                            <div class="d-flex align-items-center" style="justify-content: end" id="userDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="user-avatar me-2">
+                                    <img src="../../assets/images/US01.png" alt="Aerolineas Argentinas" class="rounded-circle"
+                                        width="40" height="40">
+                                </div>
+                                <span class="me-2 texto-colapsado" style="color: black; user-select: none;">Aerolineas Argentinas</span>
+                                <i class="bi bi-chevron-down" style="color: black;"></i>
+                            </div>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="detalle-aerolinea-perfil-propio.html">Mi Perfil</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="../index.html">Cerrar Sesión</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Category Section -->
+        <div class="bg-white border-bottom py-3">
+            <div class="container">
+                <div class="row category-icons text-center">
+                    <div class="col">
+                        <a href="listado-vuelos.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-airplane"></i>
+                            <span>Vuelos</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="listado-ruta-vuelo.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-arrow-down-up"></i>
+                            <span>Ruta de Vuelo</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="listado-usuarios.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-people"></i>
+                            <span>Usuarios</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="listado-paquete.html" class="text-decoration-none" style="color: black">
+                            <i class="bi bi-star"></i>
+                            <span>Paquetes</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4 mb-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- Botones de acción importantes -->
+                    <div class="d-grid gap-3 mb-4">
+                        <!-- Aerolinea -->
+                        <button class="btn btn-primary btn-lg">
+                            <a href="listado-ruta-vuelo.html" class="text-decoration-none" style="color: white;">
+                                <i class="bi bi-airplane me-2"></i>Crear Vuelo
+                            </a>
+                        </button>
+                        <button class="btn btn-danger btn-lg">
+                            <a href="alta-ruta-vuelo.html"
+                                class="text-decoration-none" style="color: white;">
+                                <i class="bi bi-arrow-down-up me-2"></i>Crear Ruta de Vuelo
+                            </a>
+                        </button>
+                        <!-- General -->
+                        <button class="btn btn-purple btn-lg">
+                            <a href="listado-reserva-vuelo.html" class="text-decoration-none" style="color: white;">
+                                <i class="bi bi-search me-2"></i>Consultar Reserva
+                            </a>
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header"><b>Categorías</b></div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Nacionales</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Internacionales</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Europa</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">América</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Exclusivos</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Temporada</a></li>
+                            <li class="list-group-item"><a href="listado-ruta-vuelo.html"
+                                    class="text-decoration-none text-muted enlace-hover">Cortos</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="card mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="../../assets/images/US01.png" class="img-fluid rounded-start" alt="Rio de Janeiro">
+
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-between" style="padding-bottom: 1rem;">
+                                        <h3 class="card-title fw-bold">Aerolineas Argentinas</h3>
+                                        <a href="modificar-aerolinea.html" class="btn btn-outline-primary">
+                                            <i class="bi bi-pencil-square"></i> Modificar perfil
+                                        </a>
+                                    </div>
+                                    <p class="card-text"><b>Nickname</b>: aerolineas</p>
+                                    <p class="card-text"><b>Email</b>: servicioalcliente@aerolineas.com.uy</p>
+                                    <p class="card-text"><b>Descripción</b>: Aerolınea nacional de Argentina que ofrece vuelos directos entre multiples
+                                        destinos.</p>
+                                    <p class="card-text"><b>Web</b>: https://www.aerolineas.com.ar</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="window mb-4">
+                        <h3>Rutas de Vuelo Incluidas</h3>
+                        <a href="detalle-ruta-vuelo.html" class="text-decoration-none">
+                            <div class="route-card">
+                                <div class="route-info">
+                                    <span class="flight-date">09/08/2024</span>
+                                    <h3>Buenos Aires-Montevideo (AR1380)</h3>
+                                    <span class="badge client-badge">América</span>
+                                    <span class="badge client-badge">Cortos</span>
+                                </div>
+                                <span class="status-badge" style="background-color: #198754;">Confirmado</span>
+                            </div>
+                        </a>
+                        
+                        <a href="detalle-ruta-vuelo.html" class="text-decoration-none">
+                            <div class="route-card">
+                                <div class="route-info">
+                                    <span class="flight-date">09/08/2024</span>
+                                    <h3>Montevideo-Buenos Aires (AR1381)</h3>
+                                    <span class="badge client-badge">Temporada</span>
+                                    <span class="badge client-badge">Exclusivos</span>
+                                </div>
+                                <span class="status-badge" style="background-color: #198754;">Confirmado</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </main>
+    
+    <footer class="bg-dark py-4 mt-auto footerFix">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-auto">
+                    <div class="small m-0 text-white">Copyright &copy; Volando.uy 2023</div>
+                </div>
+                <div class="col-auto">
+                    <a class="link-light small" href="#!">Privacy</a>
+                    <span class="text-white mx-1">&middot;</span>
+                    <a class="link-light small" href="#!">Terms</a>
+                    <span class="text-white mx-1">&middot;</span>
+                    <a class="link-light small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+    <script src="../../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
