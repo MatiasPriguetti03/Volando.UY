@@ -2,9 +2,6 @@
 
 Full-stack web with a variety of features such as user authentication, a booking system, the ability to create and buy packages, check-in, etc.
 
-## WIP
-This project is still in development, so for this reason there are missing features and bugs that need to be fixed.
-
 ## Features
 
 ### Users
